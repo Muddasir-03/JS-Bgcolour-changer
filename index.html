@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Background Colour</title>
+</head>
+<body>
+    <div id="switch">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+    </div>
+    <div class="cng">
+        <h1 class="text">Background Colour</h1>
+        <div class="img">
+            <img src="/images/javascript.img" alt="">
+        </div>
+      
+    </div>
+    <div class="para">
+        <p class="text">JavaScript is a popular programming language used for creating interactive and dynamic web pages. It is a high-level, interpreted language that can be executed on the client-side or server-side. JavaScript has become an essential part of web development, and its versatility and flexibility have made it one of the most widely used programming languages in the world.</p>
+
+          <p class="text">  JavaScript was initially created in 1995 by Brendan Eich, a programmer at Netscape. It was designed to be a lightweight scripting language that could run in web browsers, providing a way for developers to add interactivity to their websites. Over time, JavaScript evolved to include new features and capabilities, and it became a full-fledged programming language that could be used for a wide range of web development tasks.
+            
+            One of the key strengths of JavaScript is its versatility. It can be used for a variety of purposes, from creating complex web applications to building simple scripts that automate repetitive tasks. JavaScript can be used on the client-side to add interactivity to web pages, such as form validation, animations, and dynamic content. It can also be used on the server-side to build full-stack web applications, such as e-commerce sites, social networks, and content management systems.</p>
+            <p class="text">
+            JavaScript is an interpreted language, which means that it does not need to be compiled before it can be run. This makes it easy to write and test code quickly, without the need for complex build systems. JavaScript is also a dynamically typed language, which means that data types are inferred at runtime, making it flexible and adaptable.
+            
+            One of the most significant developments in recent years in the world of JavaScript is the rise of frameworks and libraries. These tools provide developers with pre-built components and structures that make it easier to build complex applications quickly. Some of the most popular frameworks and libraries include React, Angular, and Vue.js. These tools provide developers with the building blocks they need to create scalable and maintainable applications, allowing them to focus on the business logic and functionality rather than low-level implementation details.</p>
+            <p class="text">
+            In addition to its versatility and flexibility, JavaScript is also a highly accessible language. It has a low barrier to entry, making it easy for new developers to learn and start building applications quickly. There are also numerous resources available online, including documentation, tutorials, and communities, which provide support and guidance to developers at all skill levels.
+            
+            However, like any programming language, JavaScript has its challenges. Its flexibility and dynamic nature can make it easy to introduce bugs and errors into code. Its popularity also means that there are many different ways to accomplish the same task, which can lead to inconsistencies and make it difficult to maintain code over time.</p>
+    </div>
+
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+            if(color == "#000000"){
+               for(let elm of txt){
+                elm.style.color = "white";
+               }
+            }else{
+              for(let elm of txt){
+                elm.style.color = "black";
+              }
+            }
+        }
+    </script>
+</body>
+</html> 
